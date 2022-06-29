@@ -1,21 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from 'prop-types';
-import { Contacto } from "../models/contacto.class";
 
-const ComponenteB = ({contacto}) => {
+const ComponenteB = ({estado}) => {
+    const [conectado, setConectado] = useState(estado);
     return(
         <div>
-            <h2>Nombre: {contacto.nombre}</h2>
-            <h3>Apellido: {contacto.apellido}</h3>
-            <p>Email: {contacto.email}</p>
-            <p>Estado: {contacto.conectado ? 'Contacto En Línea' : 'Contacto No Disponible'}</p>
+            <h3>{conectado ? 'Contacto En Línea' : 'Contacto No Disponible'}</h3>
+            <button onClick={() => setConectado(!conectado)}>{conectado ? 'Desconectar' : 'Conectar'}</button>
         </div>
     )
 }
 
-// eslint-disable-next-line
-ComponenteB.PropTypes = {
-    contacto: PropTypes.instanceOf(Contacto)
+ComponenteB.propTypes = {
+    estado: PropTypes.bool
 }
 
 export default ComponenteB;
