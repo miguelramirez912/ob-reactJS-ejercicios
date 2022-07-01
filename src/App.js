@@ -1,5 +1,6 @@
 import './App.css';
-import ComponenteA from './components/componente_a';
+import Clock from './components/clockF';
+// import ComponenteA from './components/componente_a';
 import { Contacto } from './models/contacto.class';
 
 function App() {
@@ -7,7 +8,8 @@ function App() {
 
   return (
     <div className="App">
-      <ComponenteA contacto={ejemploContacto}/>
+      {/* <ComponenteA contacto={ejemploContacto}/> */}
+      <Clock/>
     </div>
   );
 }
