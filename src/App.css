@@ -36,3 +36,26 @@
     transform: rotate(360deg);
   }
 }
+
+svg{
+  cursor: pointer;
+}
+
+table{
+  margin: auto;
+}
+
+#contact-form{
+  width: 300px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+#contact-form input{
+  display: block;
+  margin: 5px;
+  padding: 2px;
+  border-radius: 2px;
+}
+
